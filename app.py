@@ -76,8 +76,10 @@ elif select=="Image":
 # video tab specifications---->
 elif select=="Video":
     st.markdown("---")
-    st.title('Upload Video')
+    st.title('Upload Video!')
+    vid_caption=st.text_input('Enter the text to show')
     st.write("#### You can upload your video here 👇")
     upvid=st.file_uploader('',type=["mp4","mkv"])
     if upvid is not None:
         st.video(upvid)
+        st.caption(vid_caption)
